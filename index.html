@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Accueil</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('rickroll.gif');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 36px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenue sur mon site</h1>
+    <audio id="music" src="never.mp3" autoplay></audio>
+
+    <script>
+        // Sélection de l'élément audio
+        const music = document.getElementById('music');
+
+        // Fonction pour jouer la musique
+        function playMusic() {
+            music.play();
+        }
+
+        // Jouer la musique automatiquement lorsque la page se charge
+        playMusic();
+
+        // Jouer la musique lorsque l'utilisateur clique sur la page
+        document.body.addEventListener('click', playMusic);
+    </script>
+</body>
+</html>
